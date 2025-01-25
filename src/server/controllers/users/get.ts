@@ -1,11 +1,11 @@
-import axios, { HttpStatusCode } from 'axios';
-import { Request, Response } from 'express'
+import { HttpStatusCode } from 'axios';
+import { Request, Response } from 'express';
+import { UsersProvider } from './../../services/providers/users';
 
 export const getAll = async (_: Request, res: Response) => {
   try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users/');
-    const processedData = response.data;
-    res.status(HttpStatusCode.Ok).send(processedData);
+    const users = await UsersProvider.getAll();
+    res.status(HttpStatusCode.Ok).send(users);
   } catch {
     res.status(HttpStatusCode.InternalServerError).send({ error: 'Failed to fetch users' });
   }
@@ -13,9 +13,8 @@ export const getAll = async (_: Request, res: Response) => {
 
 export const getAlbums = async (req: Request, res: Response) => {
   try {
-    const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${req.params.userId}/albums`);
-    const processedData = response.data;
-    res.status(HttpStatusCode.Ok).send(processedData);
+    const albums = await UsersProvider.getAlbums(req.params.userId);
+    res.status(HttpStatusCode.Ok).send(albums);
   } catch {
     res.status(HttpStatusCode.InternalServerError).send({ error: 'Failed to fetch albums' });
   }
