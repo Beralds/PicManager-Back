@@ -13,7 +13,9 @@ export const getAlbums = async (userId: string): Promise<IAlbum[]> => {
 
   albums.forEach(album => {
     const albumPhotos = photos.filter((photo) => photo.albumId === album.id);
-    album.photos = albumPhotos;
+    const correctedUrlsPhotos = 
+      albumPhotos.map((photo) => { return { ...photo, thumbnailUrl: "https://placehold.co/150", url: "https://placehold.co/600" }});
+    album.photos = correctedUrlsPhotos;
   });
 
   return albums;
