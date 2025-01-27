@@ -22,32 +22,52 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repo:
 ```bash
 git clone https://github.com/Beralds/PicManager-Back.git
-Navigate to the project directory:
+```
+
+2. Navigate to the project directory:
+```bash
 cd PicManager-Back
-Install dependencies:
+```
+
+3. Install dependencies:
+```bash
 npm install
-# or
+```
+or
+```bash
 yarn install
-Running the app
+```
+
+## Running the app
 Start the development server:
+```bash
 npm run dev
-# or
+```
+or
+```bash
 yarn run dev
+```
+
 This will start the server on http://localhost:3333.
 
-Running tests
+## Running tests
+```bash
 npm test
-# or
+```
+or
+```bash
 yarn test
+```
 
-Built With
-Node.js - JavaScript runtime environment
-Express - Web framework for Node.js
+## Built With
+* Node.js - JavaScript runtime environment
+* Express - Web framework for Node.js
 
-Authors
-Wender Lemes
-License
+## Authors
+* Wender Lemes
+
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-Contact
+## Contact
 Wender Lemes - wender.lemes@dtidigital.com.br
