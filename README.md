@@ -45,14 +45,14 @@ npm run dev
 ```
 or
 ```bash
-yarn run dev
+yarn dev
 ```
 
 This will start the server on http://localhost:3333.
 
 ## Running tests
 ```bash
-npm test
+npm run test
 ```
 or
 ```bash
